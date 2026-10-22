@@ -1,0 +1,12 @@
+# 阿里云百炼 Managed Agent 配置
+name: 懒人旅行管家
+description: 说一句话，AI管家直接给出3套拎包就走的旅行方案，机票酒店行程美食全安排好。
+model:
+  id: qwen3.8-max
+  name: Qwen3.8-Max
+system: ../prompt/system-prompt.md   # 在控制台中粘贴该文件全文
+tools:
+  builtin: [bash, write, read, edit, glob, grep, web_search, web_fetch, todo_write, mark_artifacts]
+skills:
+  - name: 飞猪旅行            # 百炼技能市场官方 Skill，搜索「飞猪」添加
+    version: "1.0"
